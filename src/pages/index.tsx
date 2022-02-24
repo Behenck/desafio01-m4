@@ -1,30 +1,35 @@
-import { Box, Flex, Image, Spacer, Text } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, Image, Spacer, Text } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import { Header } from '../components/Header'
+import { SubHeader } from '../components/SubHeader'
 
 const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <Flex
-        backgroundImage="url('/images/Background.png')"
+      <SubHeader />
+      <Flex 
+        mt="20"
         p="8"
       >
         <Box>
-          <Text
-            fontSize="4xl"
-            color="#FFF"
-          >5 Continentes, <br/> infinitas possibilidades.</Text>
-          <Text
-            color="gray.200"
-          >Chegou a hora de tirar do papel a viagem que você <br/> sempre sonhou. </Text>
+          <Image src="/images/Nightlife.svg" />
         </Box>
         <Spacer />
-        <Box 
-          boxSize={250}
-          mt={100}
-        >
-          <Image src="../images/Airplane.png"/>
+        <Box>
+          <Image src="/images/Beach.svg" />
+        </Box>
+        <Spacer />
+        <Box>
+          <Image src="/images/Modern.svg" />
+        </Box>
+        <Spacer />
+        <Box>
+          <Image src="/images/Classic.svg" />
+        </Box>
+        <Spacer />
+        <Box>
+          <Image src="/images/More.svg" />
         </Box>
       </Flex>
     </>
